@@ -26,12 +26,11 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2009', event: 'Tevco Energy founded in Lagos, Nigeria' },
-  { year: '2012', event: 'Expanded wireline services across Niger Delta' },
-  { year: '2015', event: 'Achieved ISO 9001:2015 certification' },
-  { year: '2017', event: 'Launched manpower training academy' },
-  { year: '2020', event: 'Expanded operations to 5 African countries' },
-  { year: '2023', event: 'Surpassed 200+ successful projects milestone' },
+  { year: '2008', event: 'Upstream drilling and exploration service consulting commences' },
+  { year: '2015', event: 'Expanded into the midstream and downstream services' },
+  { year: '2024', event: 'Separate consulting arms merged into Tevco Energy' },
+  { year: '2025', event: 'TeVCO officially becomes an entity in the Nigerian geomarket' },
+  { year: '2026', event: 'Launched manpower training academy' },
 ];
 
 export default function About() {
@@ -41,7 +40,7 @@ export default function About() {
       <section className="relative pt-32 pb-20 bg-[#0B1829]">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=80"
+            src="/public/TeVCO History.png"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -100,7 +99,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80"
+                src="/public/TeVCO History.png"
                 alt="Oil operations"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />

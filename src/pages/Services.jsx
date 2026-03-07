@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cable, Wrench, Flame, Users, ShoppingCart, CheckCircle, ArrowRight } from 'lucide-react';
+import { Cable, Wrench, Flame, Users, ShoppingCart, CheckCircle, ArrowRight, UtilityPole, Construction, TowerControlIcon, Sprout, PencilRulerIcon, TowerControl, Disc, Repeat, Disc2, Disc3, DiscAlbum, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/lib/utils'; // Path fixed
 
 const services = [
   {
-    id: 'wireline',
-    icon: Cable,
+    id: '',
+    icon: Disc2,
     title: 'Wireline Services',
     subtitle: 'Precision Logging & Evaluation',
-    hero: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1200&q=80',
+    hero: '/public/TeVCO Wireline.png',
     description: 'Tevco Energy provides comprehensive wireline logging services that deliver accurate, real-time data for informed decision-making. Our state-of-the-art equipment and experienced operators ensure high-quality measurements in even the most challenging well conditions.',
     capabilities: [
       'Open Hole Logging (Resistivity, Porosity, Density, Sonic)',
@@ -23,10 +23,10 @@ const services = [
   },
   {
     id: 'intervention',
-    icon: Wrench,
+    icon: TowerControlIcon,
     title: 'Well Intervention',
     subtitle: 'Optimize & Extend Well Life',
-    hero: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80',
+    hero: '/public/TeVCO Workover.png',
     description: 'Our well intervention services are designed to diagnose and resolve downhole issues, optimize production, and extend the productive life of wells. We deploy proven techniques and technologies to deliver safe, efficient interventions.',
     capabilities: [
       'Slickline & Braided Line Services',
@@ -39,10 +39,10 @@ const services = [
   },
   {
     id: 'stimulation',
-    icon: Flame,
+    icon: Droplets,
     title: 'Stimulation',
     subtitle: 'Maximize Reservoir Productivity',
-    hero: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80',
+    hero: 'TeVCO Stimulation.png',
     description: 'We deliver advanced well stimulation services that enhance reservoir connectivity and maximize recovery. Our engineering team designs customized programs based on thorough formation analysis to ensure optimal results.',
     capabilities: [
       'Matrix Acidizing (Carbonate & Sandstone)',
@@ -58,7 +58,7 @@ const services = [
     icon: Users,
     title: 'Manpower & Training',
     subtitle: "Building Africa's Energy Workforce",
-    hero: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80',
+    hero: '/public/TeVCO Manpower.png',
     description: 'We are committed to supplying skilled professionals to the oil & gas industry. Our training programs meet international standards, ensuring personnel are equipped for safe and efficient operations.',
     capabilities: [
       'Technical Skills Training & Certification',
@@ -74,7 +74,7 @@ const services = [
     icon: ShoppingCart,
     title: 'Procurement',
     subtitle: 'Global Supply Chain Solutions',
-    hero: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80',
+    hero: '/public/TeVCO Procurement.png',
     description: 'Tevco Energy provides end-to-end procurement for the energy industry. From sourcing to delivery, we ensure clients have access to quality equipment—on time and within budget.',
     capabilities: [
       'Oilfield Equipment & Tools Sourcing',
@@ -161,11 +161,11 @@ export default function Services() {
               {/* Media Side */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-red-600/10 rounded-xl blur-2xl group-hover:bg-red-600/20 transition-all" />
-                <div className="relative rounded-sm overflow-hidden border-8 border-white shadow-2xl">
+                <div className="relative rounded-sm overflow-hidden border-8 border-white shadow-2xl aspect-video">
                   <img
                     src={activeService.hero}
                     alt={activeService.title}
-                    className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
                   <div className="absolute bottom-8 left-8">

@@ -47,8 +47,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-2xl">
-              Delivering world-class oil & gas servicing solutions across Nigeria and Africa — 
-              from wireline logging to manpower supply, we drive operational excellence at every wellsite.
+              Delivering world-class oil & gas servicing solutions across Nigeria and Africa.
+              From well evaluation to manpower supply, we drive operational excellence at every wellsite.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
