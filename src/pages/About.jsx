@@ -40,7 +40,7 @@ export default function About() {
       <section className="relative pt-32 pb-20 bg-[#0B1829]">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="/public/TeVCO History.png"
+            src="TeVCO History.png"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -99,7 +99,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="/public/TeVCO History.png"
+                src="TeVCO History.png"
                 alt="Oil operations"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />

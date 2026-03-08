@@ -159,7 +159,7 @@ export default function Contact() {
               {/* Lagos Visual Placeholder */}
               <div className="relative rounded-sm overflow-hidden border border-slate-100 h-[280px] group shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
+                  src="Map PH.png"
                   alt="Lagos Operations"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />

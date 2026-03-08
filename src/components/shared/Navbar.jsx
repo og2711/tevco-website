@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo - Fixed Scaling logic */}
           <Link to="/" className="relative z-50 flex items-center">
             <img
-              src="/public/TeVCO Logo.png"
+              src="TeVCO Logo.png"
               alt="TeVCO Energy"
               className={cn(
                 "transition-all duration-300 ease-out object-contain",

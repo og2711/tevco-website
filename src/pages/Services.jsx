@@ -10,7 +10,7 @@ const services = [
     icon: Disc2,
     title: 'Wireline Services',
     subtitle: 'Precision Logging & Evaluation',
-    hero: '/public/TeVCO Wireline.png',
+    hero: 'TeVCO Wireline.png',
     description: 'Tevco Energy provides comprehensive wireline logging services that deliver accurate, real-time data for informed decision-making. Our state-of-the-art equipment and experienced operators ensure high-quality measurements in even the most challenging well conditions.',
     capabilities: [
       'Open Hole Logging (Resistivity, Porosity, Density, Sonic)',
@@ -26,7 +26,7 @@ const services = [
     icon: TowerControlIcon,
     title: 'Well Intervention',
     subtitle: 'Optimize & Extend Well Life',
-    hero: '/public/TeVCO Workover.png',
+    hero: 'TeVCO Workover.png',
     description: 'Our well intervention services are designed to diagnose and resolve downhole issues, optimize production, and extend the productive life of wells. We deploy proven techniques and technologies to deliver safe, efficient interventions.',
     capabilities: [
       'Slickline & Braided Line Services',
@@ -58,7 +58,7 @@ const services = [
     icon: Users,
     title: 'Manpower & Training',
     subtitle: "Building Africa's Energy Workforce",
-    hero: '/public/TeVCO Manpower.png',
+    hero: 'TeVCO Manpower.png',
     description: 'We are committed to supplying skilled professionals to the oil & gas industry. Our training programs meet international standards, ensuring personnel are equipped for safe and efficient operations.',
     capabilities: [
       'Technical Skills Training & Certification',
@@ -74,7 +74,7 @@ const services = [
     icon: ShoppingCart,
     title: 'Procurement',
     subtitle: 'Global Supply Chain Solutions',
-    hero: '/public/TeVCO Procurement.png',
+    hero: 'TeVCO Procurement.png',
     description: 'Tevco Energy provides end-to-end procurement for the energy industry. From sourcing to delivery, we ensure clients have access to quality equipment—on time and within budget.',
     capabilities: [
       'Oilfield Equipment & Tools Sourcing',
