@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const highlights = [
   'ISO Certified Operations',
-  'Nigerian Content (NOGICD) Compliant',
+  'Nigerian Content (NOGIC) Compliant',
   'Experienced Local & Expatriate Workforce',
   'Modern, State-of-the-art Equipment Fleet',
 ];
@@ -26,10 +26,11 @@ export default function AboutPreview() {
           >
             <div className="relative z-10">
               <img
-                src="/public/TeVCO Success.png"
+                src="TeVCO Success.png"
                 alt="Engineering Excellence"
                 className="rounded-xl shadow-2xl w-full h-[500px] object-cover border-8 border-white"
               />
+            
               
               {/* Floating Experience Card */}
               <motion.div 

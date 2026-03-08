@@ -1,21 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Cable, Wrench, Flame, Users, ShoppingCart } from 'lucide-react';
+import { ArrowRight, Cable, Wrench, Flame, Users, ShoppingCart, Disc2, TowerControl, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
-    icon: Cable,
+    icon: Disc2,
     title: 'Wireline Services',
     description: 'Precision logging and evaluation solutions using advanced sensors for real-time reservoir data and wellbore integrity.',
   },
   {
-    icon: Wrench,
+    icon: TowerControlIcon,
     title: 'Well Intervention',
     description: 'Specialized remedial operations to restore, maintain, and enhance production throughout the life of your well.',
   },
   {
-    icon: Flame,
+    icon: Droplets,
     title: 'Stimulation',
     description: 'Hydraulic fracturing and acidizing treatments designed to bypass formation damage and maximize flow potential.',
   },
