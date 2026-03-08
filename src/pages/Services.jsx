@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cable, Wrench, Flame, Users, ShoppingCart, CheckCircle, ArrowRight, UtilityPole, Construction, TowerControlIcon, Sprout, PencilRulerIcon, TowerControl, Disc, Repeat, Disc2, Disc3, DiscAlbum, Droplets } from 'lucide-react';
+import { 
+  Cable, Wrench, Flame, Users, ShoppingCart, CheckCircle, 
+  ArrowRight, UtilityPole, Construction, Sprout, PencilRuler, 
+  TowerControl, Disc, Repeat, Disc2, Disc3, DiscAlbum, Droplets 
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/lib/utils'; // Path fixed
 
 const services = [
   {
-    id: '',
+    id: 'wireline',
     icon: Disc2,
     title: 'Wireline Services',
     subtitle: 'Precision Logging & Evaluation',
@@ -23,7 +27,7 @@ const services = [
   },
   {
     id: 'intervention',
-    icon: TowerControlIcon,
+    icon: TowerControl,
     title: 'Well Intervention',
     subtitle: 'Optimize & Extend Well Life',
     hero: 'TeVCO Workover.png',

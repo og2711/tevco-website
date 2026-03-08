@@ -10,7 +10,7 @@ const services = [
     description: 'Precision logging and evaluation solutions using advanced sensors for real-time reservoir data and wellbore integrity.',
   },
   {
-    icon: TowerControlIcon,
+    icon: TowerControl,
     title: 'Well Intervention',
     description: 'Specialized remedial operations to restore, maintain, and enhance production throughout the life of your well.',
   },
