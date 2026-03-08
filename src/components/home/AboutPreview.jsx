@@ -26,7 +26,7 @@ export default function AboutPreview() {
           >
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80"
+                src="/public/TeVCO Success.png"
                 alt="Engineering Excellence"
                 className="rounded-xl shadow-2xl w-full h-[500px] object-cover border-8 border-white"
               />
@@ -37,9 +37,9 @@ export default function AboutPreview() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-10 -right-6 md:right-10 bg-red-600 text-white p-8 rounded-lg shadow-2xl"
               >
-                <div className="text-4xl font-black tracking-tighter italic">15+</div>
+                <div className="text-4xl font-black tracking-tighter italic">40+</div>
                 <div className="text-xs uppercase tracking-[0.2em] font-bold text-red-100 mt-1">
-                  Years of Technical <br /> Excellence
+                  Combined Years of <br /> Technical Excellence
                 </div>
               </motion.div>
             </div>

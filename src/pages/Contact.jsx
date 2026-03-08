@@ -18,17 +18,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office Address',
-    lines: ['Lagos, Nigeria'],
+    lines: ['Port Harcourt, Nigeria'],
   },
   {
     icon: Phone,
     title: 'Phone',
-    lines: ['+234 (0) 123 456 7890', '+234 (0) 987 654 3210'],
+    lines: ['+234 (0) 903 334 7755'],
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['info@tevcoenergy.com', 'enquiries@tevcoenergy.com'],
+    lines: ['info@tevcoenergy.com',],
   },
   {
     icon: Clock,
@@ -165,7 +165,7 @@ export default function Contact() {
                 />
                 <div className="absolute inset-0 bg-red-600/10 mix-blend-multiply" />
                 <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-sm shadow-lg">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-900">Regional HQ: Lagos</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-900">Regional HQ: Port Harcourt</span>
                 </div>
               </div>
             </div>

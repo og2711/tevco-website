@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-// Ensure framer-motion is installed: npm install framer-motion
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { cn } from '@/lib/utils'; // Ensure this utility is available
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -17,32 +17,41 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      // Small threshold for the transition to begin
+      setScrolled(window.scrollY > 20);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={cn(
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-in-out",
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-1'
-          : 'bg-transparent py-3'
-      }`}
+          ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-slate-200 py-2"
+          : "bg-transparent py-6"
+      )}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center group">
+        <div className="flex items-center justify-between transition-all duration-500">
+          
+          {/* Logo - Fixed Scaling logic */}
+          <Link to="/" className="relative z-50 flex items-center">
             <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ac4a33212ff26d344367f2/2b622ff31_TeVCO_Logo_Transparent.png"
+              src="/public/TeVCO Logo.png"
               alt="TeVCO Energy"
-              className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-16'} w-auto`}
+              className={cn(
+                "transition-all duration-300 ease-out object-contain",
+                scrolled 
+                  ? "h-16 mt-0" 
+                  : "h-24 md:h-40 -mt-8 mb-[-15px]" // Increased size, pulled up with -mt-6
+              )}
             />
           </Link>
 
@@ -54,17 +63,18 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-[13px] font-bold tracking-[0.15em] transition-all duration-300 relative uppercase ${
+                  className={cn(
+                    "text-[11px] font-black tracking-[0.25em] transition-all duration-500 relative uppercase",
                     scrolled
-                      ? isActive ? 'text-red-600' : 'text-slate-800 hover:text-red-600'
-                      : isActive ? 'text-red-500' : 'text-white hover:text-red-400'
-                  }`}
+                      ? isActive ? "text-red-600" : "text-slate-900 hover:text-red-600"
+                      : isActive ? "text-red-500" : "text-white hover:text-red-400"
+                  )}
                 >
                   {link.name}
                   {isActive && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute -bottom-2 left-0 right-0 h-0.5 bg-red-600"
+                      className="absolute -bottom-2 left-0 right-0 h-[2px] bg-red-600"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -73,7 +83,12 @@ export default function Navbar() {
             })}
             
             <Link to="/contact">
-              <button className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold tracking-widest uppercase rounded-md transition-all shadow-lg shadow-red-600/20 active:scale-95">
+              <button className={cn(
+                "px-7 py-3 text-[10px] font-black tracking-[0.2em] uppercase rounded-sm transition-all duration-500 shadow-lg active:scale-95",
+                scrolled 
+                  ? "bg-slate-950 text-white hover:bg-red-600 shadow-slate-900/10" 
+                  : "bg-red-600 text-white hover:bg-white hover:text-red-600 shadow-red-600/20"
+              )}>
                 Get a Quote
               </button>
             </Link>
@@ -81,14 +96,13 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 rounded-lg transition-colors"
+            className="md:hidden p-3 rounded-sm transition-all"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle Menu"
           >
             {mobileOpen ? (
               <X className="w-6 h-6 text-slate-900" />
             ) : (
-              <Menu className={`w-6 h-6 ${scrolled ? 'text-slate-900' : 'text-white'}`} />
+              <Menu className={cn("w-6 h-6 transition-colors duration-500", scrolled ? 'text-slate-900' : 'text-white')} />
             )}
           </button>
         </div>
@@ -98,23 +112,23 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl overflow-hidden md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl overflow-hidden md:hidden"
           >
-            <div className="px-8 py-10 flex flex-col gap-6">
+            <div className="px-8 py-12 flex flex-col gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-xl font-bold text-slate-800 hover:text-red-600 transition-colors uppercase tracking-widest"
+                  className="text-2xl font-black text-slate-900 hover:text-red-600 transition-colors uppercase tracking-tighter"
                 >
                   {link.name}
                 </Link>
               ))}
               <Link to="/contact" className="pt-4">
-                <button className="w-full py-4 bg-red-600 text-white font-bold rounded-lg uppercase tracking-widest shadow-lg">
+                <button className="w-full py-5 bg-red-600 text-white font-black text-xs uppercase tracking-widest rounded-sm shadow-xl">
                   Get a Quote
                 </button>
               </Link>
