@@ -4,7 +4,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const highlights = [
-  'ISO Certified Operations',
+  'Industry-Standard Certified Operations',
   'Nigerian Content (NOGIC) Compliant',
   'Experienced Local & Expatriate Workforce',
   'Modern, State-of-the-art Equipment Fleet',

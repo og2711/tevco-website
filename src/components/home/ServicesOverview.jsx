@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const services = [
   {
     icon: Disc2,
-    title: 'Wireline Services',
+    title: 'Wireline and Slickline Services',
     description: 'Precision logging and evaluation solutions using advanced sensors for real-time reservoir data and wellbore integrity.',
   },
   {
@@ -21,7 +21,7 @@ const services = [
   },
   {
     icon: Users,
-    title: 'Manpower Supply',
+    title: 'Project Management',
     description: 'Sourcing and training world-class technical talent to bridge the skill gap in complex offshore and onshore projects.',
   },
   {

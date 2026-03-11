@@ -30,7 +30,7 @@ const milestones = [
   { year: '2015', event: 'Expanded into the midstream and downstream services' },
   { year: '2024', event: 'Separate consulting arms merged into Tevco Energy' },
   { year: '2025', event: 'TeVCO officially becomes an entity in the Nigerian geomarket' },
-  { year: '2026', event: 'Launched manpower training academy' },
+  { year: '2026', event: 'Launched WIC Consulting and Training Partnership' },
 ];
 
 export default function About() {
@@ -51,11 +51,8 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-red-500" />
-              <span className="text-red-400 font-medium tracking-widest uppercase text-sm">About Us</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Who We Are</h1>
+           
+            <h1 className="text-4xl md:text-5xl font-bold text-white mt-8 mb-4">Who We Are</h1>
             <p className="text-gray-400 max-w-2xl text-lg">
               Learn about our journey, our mission, and the values that drive Tevco Energy forward.
             </p>
@@ -83,11 +80,11 @@ export default function About() {
                 <p>
                   Today, Tevco Energy serves major international and national oil companies, offering an 
                   integrated suite of services that includes wireline logging, well intervention, stimulation, 
-                  manpower training and supply, and procurement — all delivered with an unwavering 
+                  manpower training and supply, and procurement, all delivered with an unwavering 
                   commitment to safety and operational excellence.
                 </p>
                 <p>
-                  Our growth has been driven by our people — a team of passionate, skilled professionals 
+                  Our growth has been driven by our people; a team of passionate, skilled professionals 
                   dedicated to pushing boundaries and delivering exceptional results for our clients.
                 </p>
               </div>
@@ -126,7 +123,7 @@ export default function About() {
               <h3 className="text-2xl font-bold text-[#0B1829] mb-4">Our Mission</h3>
               <p className="text-gray-500 text-lg leading-relaxed">
                 To deliver safe, innovative, and cost-effective oil & gas services that empower our 
-                clients to achieve their operational goals — while contributing to the growth of 
+                clients to achieve their operational goals while contributing to the growth of 
                 Africa's energy sector and developing local talent.
               </p>
             </motion.div>

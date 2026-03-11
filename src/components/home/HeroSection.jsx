@@ -31,20 +31,15 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-red-500" />
-              <span className="text-red-400 font-medium tracking-widest uppercase text-sm">
-                Excellence in Energy Services
-              </span>
-            </div>
+           
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
-              Powering Africa's{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
-                Energy
-              </span>{' '}
-              Future
-            </h1>
+           <h1 className="mt-8 md:mt-12 text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+            Powering Africa's{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
+              Energy
+            </span>{' '}
+            Future
+          </h1>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-2xl">
               Delivering world-class oil & gas servicing solutions across Nigeria and Africa.

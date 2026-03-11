@@ -8,12 +8,14 @@ import { queryClientInstance } from '@/lib/query-client';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 
 // --- Project Configuration ---
-// Note: Ensure pages.config.jsx or .js exists in your src folder
 import { pagesConfig } from './pages.config'; 
 
 // --- Components & Error Pages ---
 import PageNotFound from '@/lib/PageNotFound';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+
+// --- Custom Pages ---
+import StrategicPartner from './pages/Consulting';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 
@@ -84,6 +86,16 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
+
+      {/* Manual Route for WIC Partnership - Placed outside the map loop */}
+      <Route 
+        path="/consulting" 
+        element={
+          <LayoutWrapper currentPageName="Strategic Partner">
+            <StrategicPartner />
+          </LayoutWrapper>
+        } 
+      />
 
       {/* Catch-all 404 Route */}
       <Route path="*" element={<PageNotFound />} />

@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Consulting', path: '/consulting' },
 ];
 
 export default function Navbar() {
@@ -42,18 +43,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between transition-all duration-500">
           
           {/* Logo - Fixed Scaling logic */}
-          <Link to="/" className="relative z-50 flex items-center">
-            <img
-              src="TeVCO Logo.png"
-              alt="TeVCO Energy"
-              className={cn(
-                "transition-all duration-300 ease-out object-contain",
-                scrolled 
-                  ? "h-16 mt-0" 
-                  : "h-24 md:h-40 -mt-8 mb-[-15px]" // Increased size, pulled up with -mt-6
-              )}
-            />
-          </Link>
+          <Link to="/" className="relative z-50 flex items-center group">
+  <img
+    // This swaps the file source based on scroll
+    src={scrolled ? "/TeVCO Logo-navy.svg" : "/TeVCO Logo-white.svg"}
+    alt="TeVCO Energy"
+    className={cn(
+      "transition-all duration-500 ease-in-out object-contain",
+      "[shape-rendering:crispEdges]",
+      scrolled 
+        ? "h-14 mt-0" 
+        : "h-24 md:h-45 -mt-10 mb-[-15px]" 
+    )}
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
