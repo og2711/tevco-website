@@ -155,8 +155,8 @@ export default function Contact() {
               {/* Lagos Visual Placeholder */}
               <div className="relative rounded-sm overflow-hidden border border-slate-100 h-[280px] group shadow-xl">
                 <img
-                  src="Map PH.png"
-                  alt="Lagos Operations"
+                  src="MAP PH.png"
+                  alt="Port Harcourt Operations"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />
                 <div className="absolute inset-0 bg-red-600/10 mix-blend-multiply" />
