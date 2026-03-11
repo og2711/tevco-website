@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { Activity, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Cable, Wrench, Flame, Users, ShoppingCart, CheckCircle, 
   ArrowRight, UtilityPole, Construction, Sprout, PencilRuler, 
-  TowerControl, Disc, Repeat, Disc2, Disc3, DiscAlbum, Droplets 
+  TowerControl, Disc, Repeat, Disc2, Disc3, DiscAlbum, Droplets, ActivityIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/lib/utils'; // Path fixed
@@ -12,14 +12,14 @@ const services = [
   {
     id: 'wireline',
     icon: Disc2,
-    title: 'Wireline Services',
+    title: 'Wireline and Slickline',
     subtitle: 'Precision Logging & Evaluation',
     hero: 'TeVCO Wireline.png',
     description: 'Tevco Energy provides comprehensive wireline logging services that deliver accurate, real-time data for informed decision-making. Our state-of-the-art equipment and experienced operators ensure high-quality measurements in even the most challenging well conditions.',
     capabilities: [
       'Open Hole Logging (Resistivity, Porosity, Density, Sonic)',
       'Cased Hole Logging (Cement Evaluation, Production Logging)',
-      'Formation Evaluation & Reservoir Characterization',
+      'Formation Evaluation, Geoscience & Reservoir Characterization',
       'Pipe Inspection & Corrosion Logging',
       'Perforation Services',
       'Real-time Data Transmission & Interpretation',
@@ -33,12 +33,13 @@ const services = [
     hero: 'TeVCO Workover.png',
     description: 'Our well intervention services are designed to diagnose and resolve downhole issues, optimize production, and extend the productive life of wells. We deploy proven techniques and technologies to deliver safe, efficient interventions.',
     capabilities: [
-      'Slickline & Braided Line Services',
+      'Well Integrity and Intervention',
       'Coiled Tubing Operations',
       'Well Clean-out & Debris Removal',
       'Mechanical Plug Setting & Retrieval',
       'Downhole Tool Fishing',
       'Scale & Wax Removal Programs',
+      'Well Testing and Production Optimization',
     ],
   },
   {
@@ -58,19 +59,19 @@ const services = [
     ],
   },
   {
-    id: 'manpower',
-    icon: Users,
-    title: 'Manpower & Training',
-    subtitle: "Building Africa's Energy Workforce",
-    hero: 'TeVCO Manpower.png',
-    description: 'We are committed to supplying skilled professionals to the oil & gas industry. Our training programs meet international standards, ensuring personnel are equipped for safe and efficient operations.',
+    id: 'project-management',
+    icon: ActivityIcon,
+    title: 'Project management',
+    subtitle: 'Delivering Africa’s Energy Infrastructure',
+    hero: 'TeVCO PM.png',
+    description: 'We provide end-to-end stewardship of your field assets—from initial site assessment and drilling logistics to long-term production maintenance—ensuring maximum recovery with minimized operational risk.',
     capabilities: [
-      'Technical Skills Training & Certification',
-      'HSE Awareness & Safety Leadership',
-      'Skilled Personnel Recruitment',
-      'Expatriate & Local Workforce Management',
-      'Competency Assessment & Development',
-      'On-site Mentoring & Coaching',
+      'Field development services',
+      'Drilling and completion chemicals',
+      'Equipment procurement & logistics',
+      'Operational safety oversight',
+      'Regulatory compliance management',
+      'Production optimization',
     ],
   },
   {
@@ -113,12 +114,6 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-[2px] w-12 bg-red-600" />
-              <span className="text-red-500 font-black tracking-[0.4em] uppercase text-xs">
-                Capabilities
-              </span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter">
               Integrated <span className="text-red-600 italic">Energy Solutions</span>
             </h1>

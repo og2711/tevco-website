@@ -23,7 +23,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    lines: ['+234 (0) 903 334 7755'],
+    lines: ['+234 0903 334 7755',
+       '+44 790 202 7442 (UK)'],
   },
   {
     icon: Mail,
@@ -106,12 +107,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-[2px] w-12 bg-red-600" />
-              <span className="text-red-500 font-black tracking-[0.4em] uppercase text-xs">
-                Get in Touch
-              </span>
-            </div>
+            
             <h1 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tighter">
               Let's Discuss Your <br />
               <span className="text-red-600 italic">Next Project</span>
