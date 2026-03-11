@@ -83,7 +83,7 @@ export default function Consulting() {
             className="h-64 w-auto mx-auto -mt-24 -mb-12 object-contain" // Centered and sized similarly to the old icon
           />
           <h2 className="text-3xl font-black text-slate-900 mb-6 tracking-tight">
-            Our Business Transformation Arm
+            Consulting Partners
           </h2>
           <p className="text-slate-600 text-lg mb-10 font-light">
             Detailed consulting services, AI audits, and corporate training portfolios are 
